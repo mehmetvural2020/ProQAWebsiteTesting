@@ -1,5 +1,20 @@
 Feature: Verifying Logo Section
 
-  Scenario:Logo Section Verification
+  Scenario Outline:Logo Section Verification
+
     Given User is on Landing page
-    When User verifies that logos are displayed on the home page
+    When Verifies that "<Logos>" are present
+    Examples:
+      | Logos       |
+      |Selenium     |
+      |BitBucket    |
+      |cucumber     |
+      |Jira Software|
+      |Jenkins      |
+      |appium       |
+      |Maven        |
+      |Azure        |
+      |Java         |
+      |Rest-assured |
+      |Apache jMeter|
+      |TestNG       |
