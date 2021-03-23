@@ -16,7 +16,7 @@ public class LogoSection {
 
     @FindBy(xpath = "//div[@id='rb_image_605986d609f7d']//img[@class='image']")
     public WebElement bitbucketLogo;
-    
+
     @FindBy(xpath = "//div[@id='rb_image_605986d60a3e4']//img[@class='image']")
     public WebElement cucumberLogo;
 
@@ -42,7 +42,7 @@ public class LogoSection {
     public WebElement restAssuredLogo;
 
     @FindBy(xpath = "//div[@id='rb_image_605986d60c6c9']//img[@class='image']")
-    public WebElement apacheMeterLogo;
+    public WebElement apacheJMeterLogo;
 
     @FindBy(xpath = "//div[@id='rb_image_605986d60c9a2']//img[@class='image']")
     public WebElement testNGLogo;
