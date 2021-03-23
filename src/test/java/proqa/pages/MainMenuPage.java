@@ -13,4 +13,13 @@ public class MainMenuPage extends Base {
     }
     @FindBy(xpath = "(//img[@alt='proqa.dev'])[1]")
     public WebElement mainLogo;
+
+    @FindBy(linkText = "Home")
+    public WebElement homeText;
+
+    @FindBy(linkText = "Services")
+    public WebElement servicesText;
+
+    @FindBy(xpath = "(//h3[@class='rb_textmodule_title has_divider'])[1]")
+    public WebElement serviceDiv;
 }

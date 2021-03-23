@@ -17,6 +17,11 @@ public class MainMenuStepDef extends Base {
     public void verifiesTheLogoAndTextsOnMainMenu() {
 
        mainMenuPage.mainLogo.isDisplayed();
+       textIsDisplayedAndEnabled("Home", mainMenuPage.homeText);
+       click(mainMenuPage.homeText);
+       textIsDisplayedAndEnabled("Services",mainMenuPage.servicesText);
+       click(mainMenuPage.servicesText);
+       mainMenuPage.serviceDiv.isDisplayed();
 
     }
 
