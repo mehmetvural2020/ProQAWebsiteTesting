@@ -22,4 +22,34 @@ public class MainMenuPage extends Base {
 
     @FindBy(xpath = "(//h3[@class='rb_textmodule_title has_divider'])[1]")
     public WebElement serviceDiv;
+
+    @FindBy(xpath = "//ul[@id='menu-main-1']//a[text()='How We Do']")
+    public WebElement howWeDo;
+
+    @FindBy(xpath = " (//h3[@class='rb_textmodule_title has_divider'])[2]")
+    public WebElement howWeDoText;
+
+    @FindBy(linkText = "Principles")
+    public WebElement principles;
+
+    @FindBy(xpath = "//h3[text()='ProQA Principles']")
+    public WebElement proqaPrinciplesText;
+
+    @FindBy(linkText = "Blog")
+    public WebElement blog;
+
+    @FindBy(xpath = "(//h1[@class='page_title'])[1]")
+    public WebElement blogText;
+
+    @FindBy(linkText = "Contact")
+    public WebElement contact;
+
+    @FindBy(xpath = " //h3[text()='Free Consultation']")
+    public WebElement freeConsultationText;
+
+
+
+
+
+
 }
