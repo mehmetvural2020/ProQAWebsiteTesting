@@ -18,13 +18,16 @@ Feature: Verifying SecondaryMenu
   Scenario:Twitter Verification
 #    Given User is on home page
     When User clicks to “Twitter“ icon
-    Then User lands to “https://twitter.com/proqadev“
+    Then User verifies the open page for Twitter
 
   @Linkedin
   Scenario:Linkedin Verification
 #    Given User is on home page
     When User clicks to “Linkedin“ icon
-    Then User lands to “https://twitter.com/proqadev“
+    Then User verifies the open page for Linkedin
+
+#    When User clicks to “Linkedin“ icon
+#    Then User lands to https://twitter.com/proqadev
 
 
 
