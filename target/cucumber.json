@@ -1,0 +1,75 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-03-23T23:08:46.726Z",
+        "before": [
+          {
+            "result": {
+              "duration": 15175000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "proqa.stepDef.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Main menu logo and texts verification",
+        "description": "",
+        "id": "main-menu-webelements;main-menu-logo-and-texts-verification",
+        "after": [
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "proqa.stepDef.Hooks.after(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 112000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on Homepage",
+            "match": {
+              "location": "proqa.stepDef.MainMenuStepDef.userIsOnHomepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 9988000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "verifies the logo and texts on main menu",
+            "match": {
+              "location": "proqa.stepDef.MainMenuStepDef.verifiesTheLogoAndTextsOnMainMenu()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@mainMenu"
+          }
+        ]
+      }
+    ],
+    "name": "Main Menu WebElements",
+    "description": "",
+    "id": "main-menu-webelements",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/MainMenuPage.feature",
+    "tags": []
+  }
+]
