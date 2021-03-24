@@ -20,6 +20,7 @@ Feature: Verifying SecondaryMenu
     When User clicks to “Twitter“ icon
     Then User lands to “https://twitter.com/proqadev“
 
+  @Linkedin
   Scenario:Linkedin Verification
 #    Given User is on home page
     When User clicks to “Linkedin“ icon
