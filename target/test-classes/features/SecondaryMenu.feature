@@ -5,6 +5,7 @@ Feature: Verifying SecondaryMenu
 
   @Email
   Scenario:Email Verification
+    Given user is in landing page and verify
     When user clicks to “email” address
 #    Then user verifies that default email editor is opened
 
@@ -22,7 +23,8 @@ Feature: Verifying SecondaryMenu
     When User clicks to “Linkedin“ icon
     Then User verifies that Linkedin page is opened
 
-#    When User clicks to “Linkedin“ icon
+
+#    When User clicks to “Twitter“ icon
 #    Then User lands to https://twitter.com/proqadev
 
 
