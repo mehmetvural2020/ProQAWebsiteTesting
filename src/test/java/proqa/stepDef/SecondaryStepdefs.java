@@ -35,19 +35,21 @@ public class SecondaryStepdefs extends Base {
     public void userClicksToTwitterIcon() {
         click(secondaryMenu.twitter);
         waitSomeTime(500L);
-        textIsDisplayedAndEnabled("ProQA", secondaryMenu.twittertext);
     }
 
     @Then("User verifies that Twitter page is opened")
     public void userVerifiesThatTwitterPageIsOpened() {
+        textIsDisplayedAndEnabled("ProQA", secondaryMenu.twittertext);
     }
 
     @When("User clicks to “Linkedin“ icon")
     public void userClicksToLinkedinIcon() {
+        click(secondaryMenu.linkedin);
     }
 
     @Then("User verifies that Linkedin page is opened")
     public void userVerifiesThatLinkedinPageIsOpened() {
+        textIsDisplayedAndEnabled("ProQA", secondaryMenu.linkedintext);
     }
 
 
