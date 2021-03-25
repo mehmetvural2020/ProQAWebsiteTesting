@@ -18,7 +18,7 @@ public class SecondaryStepdefs extends Base {
     @When("user clicks to “email” address")
     public void userClicksToEmailAddress() {
         click(secondaryMenu.email);
-        textIsDisplayedAndEnabled("info@proqa.dev", secondaryMenu.emailtext);
+        textIsDisplayedAndEnabled("info@proqa.dev", secondaryMenu.emailText);
     }
 
     @Then("user verifies that default email editor is opened")
@@ -40,7 +40,7 @@ public class SecondaryStepdefs extends Base {
 
     @Then("User verifies that Twitter page is opened")
     public void userVerifiesThatTwitterPageIsOpened() {
-        textIsDisplayedAndEnabled("ProQA", secondaryMenu.twittertext);
+        textIsDisplayedAndEnabled("ProQA", secondaryMenu.twitterText);
         String twitterUrl = MyDriver.get().getCurrentUrl();
         verifyTheText(twitterUrl, "https://twitter.com/proqadev" );
     }
@@ -53,7 +53,7 @@ public class SecondaryStepdefs extends Base {
 
     @Then("User verifies that Linkedin page is opened")
     public void userVerifiesThatLinkedinPageIsOpened() {
-        textIsDisplayedAndEnabled("ProQA", secondaryMenu.linkedintext);
+        textIsDisplayedAndEnabled("ProQA", secondaryMenu.linkedinText);
         String linkedinUrl = MyDriver.get().getCurrentUrl();
         verifyTheText(linkedinUrl, "https://www.linkedin.com/company/proqa" );
 
