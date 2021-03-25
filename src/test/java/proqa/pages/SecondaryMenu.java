@@ -29,6 +29,13 @@ public class SecondaryMenu {
     @FindBy (xpath = "(//i[@class=\"flaticon-linked-in\"])[1]")
     public WebElement linkedin;
 
+    @FindBy (xpath = "//h1[normalize-space()='ProQA']")
+    public WebElement linkedintext;
+
+
+
+
+
 
 
 }
