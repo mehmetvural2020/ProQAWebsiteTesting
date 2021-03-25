@@ -1,3 +1,4 @@
+@mainMenu1
 Feature: Main Menu WebElements
 
   @mainMenu
