@@ -22,8 +22,7 @@ Feature: Verifying SecondaryMenu
     When User clicks to “Linkedin“ icon
     Then User verifies that Linkedin page is opened
 
-
-#    When User clicks to “Twitter“ icon
+#    When User clicks to “Linkedin“ icon
 #    Then User lands to https://twitter.com/proqadev
 
 

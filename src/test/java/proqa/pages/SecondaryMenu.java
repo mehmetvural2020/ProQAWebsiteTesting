@@ -17,7 +17,7 @@ public class SecondaryMenu {
     @FindBy (xpath = "//span[normalize-space()='info@proqa.dev']")
     public WebElement emailtext;
 
-    @FindBy (xpath = "(//a[@class = \"custom_url\"])[1]")
+    @FindBy (xpath = "(//span[@class=\"title \"])[2]")
     public WebElement address;
 
     @FindBy (xpath = "(//i[@class=\"flaticon-twitter\"])[1]")
@@ -31,6 +31,9 @@ public class SecondaryMenu {
 
     @FindBy (xpath = "//h1[normalize-space()='ProQA']")
     public WebElement linkedintext;
+
+
+
 
 
 
