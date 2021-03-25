@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import proqa.pages.SecondaryMenu;
 import proqa.stepDef.Base;
+import proqa.utils.MyDriver;
 
 public class SecondaryStepdefs extends Base {
 
@@ -40,16 +41,24 @@ public class SecondaryStepdefs extends Base {
     @Then("User verifies that Twitter page is opened")
     public void userVerifiesThatTwitterPageIsOpened() {
         textIsDisplayedAndEnabled("ProQA", secondaryMenu.twittertext);
+        String twitterUrl = MyDriver.get().getCurrentUrl();
+        verifyTheText(twitterUrl, "https://twitter.com/proqadev" );
     }
 
     @When("User clicks to “Linkedin“ icon")
     public void userClicksToLinkedinIcon() {
         click(secondaryMenu.linkedin);
+
     }
 
     @Then("User verifies that Linkedin page is opened")
     public void userVerifiesThatLinkedinPageIsOpened() {
         textIsDisplayedAndEnabled("ProQA", secondaryMenu.linkedintext);
+        String linkedinUrl = MyDriver.get().getCurrentUrl();
+        verifyTheText(linkedinUrl, "https://www.linkedin.com/company/proqa" );
+
+
+
     }
 
 
