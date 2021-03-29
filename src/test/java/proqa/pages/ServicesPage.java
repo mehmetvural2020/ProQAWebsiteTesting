@@ -10,6 +10,9 @@ public class ServicesPage {
         PageFactory.initElements(MyDriver.get(), this);
     }
 
+    @FindBy(xpath="//h3[normalize-space()='Services']")
+    public WebElement services;
+
     @FindBy(xpath="//img[@src='https://www.proqa.dev/wp-content/uploads/2019/09/img_03-3.jpg']")
     public WebElement webTestingImage;
 
