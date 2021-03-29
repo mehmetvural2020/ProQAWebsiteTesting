@@ -6,7 +6,7 @@ Feature: Verifying SecondaryMenu
   @Email
   Scenario:Email Verification
     When user clicks to “email” address
-#    Then user verifies that default email editor is opened
+    Then user verifies that default email editor is opened
 
   @Address
   Scenario:Address Verification
