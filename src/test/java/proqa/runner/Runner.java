@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
                 features = "src/test/resources/features/",
                 dryRun = false,
 //              strict = false,
-                tags = "@mainMenu",
+                //tags ="@mainMenu",
                 plugin = {"pretty",
                 "html:target/default-cucumber-reports",
                 "json:target/cucumber.json"})
