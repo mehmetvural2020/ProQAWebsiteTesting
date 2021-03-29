@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import proqa.utils.MyDriver;
 
-public class SecondaryMenu {
+public class SecondaryMenuPage {
 
-    public SecondaryMenu() {
+    public SecondaryMenuPage() {
         PageFactory.initElements(MyDriver.get(), this);
     }
 

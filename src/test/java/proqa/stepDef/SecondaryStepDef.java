@@ -3,13 +3,12 @@ package proqa.stepDef;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import proqa.pages.SecondaryMenu;
-import proqa.stepDef.Base;
+import proqa.pages.SecondaryMenuPage;
 import proqa.utils.MyDriver;
 
-public class SecondaryStepdefs extends Base {
+public class SecondaryStepDef extends Base {
 
-    SecondaryMenu secondaryMenu = new SecondaryMenu();
+    SecondaryMenuPage secondaryMenu = new SecondaryMenuPage();
 
     @Given("User is on home page")
     public void userIsOnHomePage() {
