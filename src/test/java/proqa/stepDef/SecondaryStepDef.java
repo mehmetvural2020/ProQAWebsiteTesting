@@ -20,16 +20,16 @@ public class SecondaryStepDef extends Base {
         textIsDisplayedAndEnabled("info@proqa.dev", secondaryMenu.emailText);
     }
 
-    @Then("user verifies that default email editor is opened")
-    public void userVerifiesThatDefaultEmailEditorIsOpened() {
+    @Then("default email editor is opened")
+    public void defaultEmailEditorIsOpened() {
 
     }
 
-    @When("User verifies that address “Chicago, IL“ is displayed on the home page")
-    public void userVerifiesThatAddressChicagoILIsDisplayedOnTheHomePage() {
+    @Then("the address in Chicago,IL is displayed on home screen")
+    public void theAddressInChicagoILIsDisplayedOnHomeScreen() {
         textIsDisplayedAndEnabled("Chicago, IL" , secondaryMenu.address);
-
     }
+
 
     @When("User clicks to “Twitter“ icon")
     public void userClicksToTwitterIcon() {
@@ -37,11 +37,12 @@ public class SecondaryStepDef extends Base {
         waitSomeTime(500L);
     }
 
-    @Then("User verifies that Twitter page is opened")
-    public void userVerifiesThatTwitterPageIsOpened() {
+    @Then("correct Twitter page is opened")
+    public void correctTwitterPageIsOpened() {
         textIsDisplayedAndEnabled("ProQA", secondaryMenu.twitterText);
         String twitterUrl = MyDriver.get().getCurrentUrl();
         verifyTheText(twitterUrl, "https://twitter.com/proqadev" );
+
     }
 
     @When("User clicks to “Linkedin“ icon")
@@ -50,15 +51,12 @@ public class SecondaryStepDef extends Base {
 
     }
 
-    @Then("User verifies that Linkedin page is opened")
-    public void userVerifiesThatLinkedinPageIsOpened() {
+    @Then("correct Linkedin page is opened")
+    public void correctLinkedinPageIsOpened() {
         textIsDisplayedAndEnabled("ProQA", secondaryMenu.linkedinText);
         String linkedinUrl = MyDriver.get().getCurrentUrl();
         verifyTheText(linkedinUrl, "https://www.linkedin.com/company/proqa" );
 
-
-
     }
-
 
 }
