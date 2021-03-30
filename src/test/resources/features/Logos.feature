@@ -4,4 +4,4 @@ Feature:Verifying Logo Section
 
   @logos
   Scenario:Logo Section Verification
-    When Verifies that Logos are present
+    Then Logos are displayed under Services section on the homepage

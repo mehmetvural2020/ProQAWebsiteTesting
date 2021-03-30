@@ -1,6 +1,7 @@
 package proqa.stepDef;
 
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import proqa.pages.LogosPage;
@@ -21,8 +22,8 @@ public class LogosStepDefs extends Base {
         waitSomeTime(3000L);
     }
 
-    @When("Verifies that Logos are present")
-    public void verifiesThatLogosArePresent() {
+    @Then("Logos are displayed under Services section on the homepage")
+    public void logosAreDisplayedUnderServicesSectionOnTheHomepage() {
 
         waitSomeTime(3000L);
 

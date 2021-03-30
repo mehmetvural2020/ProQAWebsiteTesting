@@ -24,7 +24,7 @@ public class HowWeDoPage {
     public WebElement firstNumber;
 
     @FindBy(xpath = "(//p[@class='h3 roadmap_title'])[1]")
-    public WebElement scopeAnalysisText;
+    public WebElement scopeAnalysisHeading;
 
     @FindBy(xpath = "(//p[@class='roadmap_description'])[1]")
     public WebElement scopeAnalysisExplanation;
@@ -36,7 +36,7 @@ public class HowWeDoPage {
     public WebElement secondNumber;
 
     @FindBy(xpath = "(//p[@class='h3 roadmap_title'])[2]")
-    public WebElement planText;
+    public WebElement planHeading;
 
     @FindBy(xpath = "(//p[@class='roadmap_description'])[2]")
     public WebElement planExplanation;
@@ -48,7 +48,7 @@ public class HowWeDoPage {
     public WebElement thirdNumber;
 
     @FindBy(xpath = "(//p[@class='h3 roadmap_title'])[3]")
-    public WebElement testText;
+    public WebElement testHeading;
 
     @FindBy(xpath = "(//p[@class='roadmap_description'])[3]")
     public WebElement testExplanation;
@@ -60,10 +60,10 @@ public class HowWeDoPage {
     public WebElement forthNumber;
 
     @FindBy(xpath = "(//p[@class='h3 roadmap_title'])[4]")
-    public WebElement reportText;
+    public WebElement reportHeading;
 
     @FindBy(xpath = "(//p[@class='roadmap_description'])[4]")
-    public WebElement resultExplanation;
+    public WebElement reportExplanation;
 
     @FindBy(xpath = "//p[contains(text(),'Improve time to market with continuous delivery and test ')]")
     public WebElement lastDescription;
