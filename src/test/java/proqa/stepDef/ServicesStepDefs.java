@@ -30,6 +30,10 @@ public class ServicesStepDefs extends Base {
     @When("User verifies that Services Texts are present")
     public void userVerifiesThatServicesTextsArePresent() {
 
+        scrollDown(servicesPage.services);
+
+        waitSomeTime(2000L);
+
         textIsDisplayedAndEnabled("Web Testing", servicesPage.webTestingText);
 
         textIsDisplayedAndEnabled("Mobile Testing", servicesPage.mobileTestingText);
