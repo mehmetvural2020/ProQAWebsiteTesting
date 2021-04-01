@@ -53,5 +53,6 @@ public class Hooks {
 //        System.out.println("Browser Close" + browserClose);
 //        if(browserClose.equals("0")) {MyDriver.get().close();}
 
+
     }
 }
