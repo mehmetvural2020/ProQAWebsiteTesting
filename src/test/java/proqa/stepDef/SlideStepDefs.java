@@ -42,22 +42,37 @@ public class SlideStepDefs extends Base {
 
     @Given("user is in landing page and click next arrow button")
     public void userIsInLandingPageAndClickNextArrowButton() {
+        moveToElement(slidePage.rightArrow);
+        waitSomeTime(1000L);
+        click(slidePage.rightArrow);
+        waitSomeTime(1000L);
     }
 
     @When("user verifies that meeting table image is present")
     public void userVerifiesThatMeetingTableImageIsPresent() {
+        imageIsDisplayedAndEnabled(slidePage.slideImage2);
     }
 
     @And("user verifies that contact slide title is present")
     public void userVerifiesThatContactSlideTitleIsPresent() {
+        String expected = "free consultation";
+        moveToElement(slidePage.slideTitle2);
+        waitSomeTime(3000L);
+        textIsDisplayedAndEnabled(expected, slidePage.slideTitle2);
     }
 
     @And("user clicks Contact Now and verifies")
     public void userClicksContactNowAndVerifies() {
+        click(slidePage.contactNowBtn);
+        waitSomeTime(1000L);
+        String expected = "Free Consultation";
+
     }
 
     @Then("user clicks on right arrow and verify the last slide")
     public void userClicksOnRightArrowAndVerifyTheLastSlide() {
+
+
     }
 
     @Given("user is in landing page and click next button two times")
@@ -74,5 +89,25 @@ public class SlideStepDefs extends Base {
 
     @Then("user clicks on right arrow and verify main slide")
     public void userClicksOnRightArrowAndVerifyMainSlide() {
+    }
+
+    @Given("user is in landing page")
+    public void userIsInLandingPage() {
+    }
+
+    @When("user clicks on the left arrow on slider")
+    public void userClicksOnTheLeftArrowOnSlider() {
+    }
+
+    @And("user verifies that third slide title is present")
+    public void userVerifiesThatThirdSlideTitleIsPresent() {
+    }
+
+    @And("user clicks on the left arrow and verify the second slide title is present")
+    public void userClicksOnTheLeftArrowAndVerifyTheSecondSlideTitleIsPresent() {
+    }
+
+    @Then("user clicks on the left arrow and verify the first slide title is present")
+    public void userClicksOnTheLeftArrowAndVerifyTheFirstSlideTitleIsPresent() {
     }
 }
