@@ -9,16 +9,17 @@ Questions :
 2- How to write manual testing details?
 3-
 
-       git init
-       git status
-  612  git add *
-  613  git status
-  614  git commit -m "First commit"
-  615  git status
-  616  git branch -M main
-  617  git status
-  618  git log
-  619  git remote add origin https://github.com/ZennT/test.git
-  620  git push -u origin main
+Git Commands :
+        git init
+        git status
+        git add *
+        git status
+        git commit -m "First commit"
+        git status
+        git branch -M main
+        git status
+        git log
+        git remote add origin https://github.com/ZennT/test.git
+        git push -u origin main
 
 
