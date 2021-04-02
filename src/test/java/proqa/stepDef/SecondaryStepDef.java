@@ -15,7 +15,7 @@ public class SecondaryStepDef extends Base {
     }
 
 
-    @Then("User clicks and verifies “email”")
+    @When("User clicks and verifies “email”")
     public void userClicksAndVerifiesEmail() {
        textIsDisplayedAndEnabled("info@proqa.dev", secondaryMenu.emailText);
        // waitSomeTime(200L);

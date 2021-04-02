@@ -5,8 +5,8 @@ Feature: Verifying SecondaryMenu
 
   @Email
   Scenario:Email Verification
-    When user clicks to “email” address
-    Then default email editor is opened
+    When User clicks and verifies “email”
+#    Then default email editor is opened
 
   @Address
   Scenario:Address Verification

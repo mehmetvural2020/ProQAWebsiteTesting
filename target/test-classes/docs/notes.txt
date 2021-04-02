@@ -6,6 +6,20 @@ Notes...
 
 Questions :
 1- Do we need to write scenario for each WebElement or not?
-2-
+2- How to write manual testing details?
+3-
+
+Git Commands :
+        git init
+        git status
+        git add *
+        git status
+        git commit -m "First commit"
+        git status
+        git branch -M main
+        git status
+        git log
+        git remote add origin https://github.com/ZennT/test.git
+        git push -u origin main
 
 
