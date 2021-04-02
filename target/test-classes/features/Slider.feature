@@ -22,6 +22,13 @@ Feature: Verifying slider web elements
     And user verifies that the last slide title is present
     Then user clicks on right arrow and verify main slide
 
+  Scenario: Scenario: Verifying left arrow on slider
+    Given user is in landing page
+    When user clicks on the left arrow on slider
+    And user verifies that third slide title is present
+    And user clicks on the left arrow and verify the second slide title is present
+    Then user clicks on the left arrow and verify the first slide title is present
+
 #  Image “Surfing man“
 #  Main text “Agile Testing“
 #  Secondary Text “Promoting consistent project momentum“

@@ -1,5 +1,6 @@
 package proqa.stepDef;
 
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import proqa.pages.ServicesPage;
 
@@ -7,8 +8,8 @@ public class ServicesStepDefs extends Base {
 
     ServicesPage servicesPage = new ServicesPage();
 
-    @When("User verifies that Services Images are present")
-    public void userVerifiesThatServicesImagesArePresent() {
+    @Then("Services Images are displayed on the homepage")
+    public void servicesImagesAreDisplayedOnTheHomepage() {
 
         scrollDown(servicesPage.services);
 
@@ -27,8 +28,8 @@ public class ServicesStepDefs extends Base {
         imageIsDisplayedAndEnabled(servicesPage.automatedTestingImage);
     }
 
-    @When("User verifies that Services Texts are present")
-    public void userVerifiesThatServicesTextsArePresent() {
+    @Then("Services texts are displayed on the homepage")
+    public void servicesTextsAreDisplayedOnTheHomepage() {
 
         scrollDown(servicesPage.services);
 
@@ -47,4 +48,8 @@ public class ServicesStepDefs extends Base {
         textIsDisplayedAndEnabled("Automated Testing", servicesPage.automatedTestingText);
 
     }
+
+
+
+
 }

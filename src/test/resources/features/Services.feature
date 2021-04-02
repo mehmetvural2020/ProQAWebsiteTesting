@@ -5,11 +5,11 @@ Feature: Verifying Services Elements
 
     @images
     Scenario: Services Images Verification
-      When User verifies that Services Images are present
+      Then Services Images are displayed on the homepage
 
     @texts
     Scenario: Services Texts Verification
-      When User verifies that Services Texts are present
+      Then Services texts are displayed on the homepage
 
 
 
