@@ -17,6 +17,12 @@ public class SecondaryMenuPage {
     @FindBy (xpath = "//span[normalize-space()='info@proqa.dev']")
     public WebElement emailText;
 
+    @FindBy(xpath = "//div[@id=':ok']")
+    public WebElement newMessage;
+
+    @FindBy(xpath = "//div[@class='vT']")
+    public WebElement defaultEmail;
+
     @FindBy (xpath = "(//span[@class=\"title \"])[2]")
     public WebElement address;
 

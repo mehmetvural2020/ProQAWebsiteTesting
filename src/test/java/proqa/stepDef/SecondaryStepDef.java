@@ -16,13 +16,17 @@ public class SecondaryStepDef extends Base {
 
     @When("user clicks to “email” address")
     public void userClicksToEmailAddress() {
+       textIsDisplayedAndEnabled("info@proqa.dev", secondaryMenu.emailText);
+       // waitSomeTime(200L);
         click(secondaryMenu.email);
-        textIsDisplayedAndEnabled("info@proqa.dev", secondaryMenu.emailText);
     }
 
     @Then("default email editor is opened")
     public void defaultEmailEditorIsOpened() {
-
+//        String defEmailAddress = MyDriver.get().getCurrentUrl();
+//        verifyTheText(defEmailAddress, " https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=info@proqa.dev" );
+      //textIsDisplayedAndEnabled("New Message" , secondaryMenu.newMessage);
+      //textIsDisplayedAndEnabled("info@proqa.dev", secondaryMenu.defaultEmail);
     }
 
     @Then("the address in Chicago,IL is displayed on home screen")
