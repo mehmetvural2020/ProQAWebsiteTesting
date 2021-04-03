@@ -19,9 +19,18 @@ public class SlidePage {
     @FindBy(xpath = "//rs-arrow[@class='tp-rightarrow tparrows persephone']")
     public WebElement rightArrow;
 
-
     @FindBy(xpath = "//rs-slide[@data-key='rs-2']")
     public WebElement slideImage2;
+
+    @FindBy(xpath = "//rs-layer[@id='slider-1-slide-2-layer-7']")
+    public WebElement slideTitle2;
+
+    @FindBy(xpath = "//rs-layer[@id=\"slider-1-slide-2-layer-56\"]")
+    public WebElement contactNowBtn;
+
+    @FindBy(xpath = "//h3[contains(text(), 'Free Consultation')]")
+    public WebElement freeConsultation;
+
 
     @FindBy(xpath = "//rs-slide[@data-key='rs-3']")
     public WebElement slideImage3;

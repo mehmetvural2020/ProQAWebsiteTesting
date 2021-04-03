@@ -5,24 +5,22 @@ Feature: Verifying SecondaryMenu
 
   @Email
   Scenario:Email Verification
-    When user clicks to “email” address
-#    Then user verifies that default email editor is opened
+    When User clicks and verifies “email”
+#    Then default email editor is opened
 
   @Address
   Scenario:Address Verification
-    When User verifies that address “Chicago, IL“ is displayed on the home page
-  # Then the address in Chicago,IL is displayed on home screen
+    Then the address in Chicago,IL is displayed on home screen
 
   @Twitter
   Scenario:Twitter Verification
     When User clicks to “Twitter“ icon
-    Then User verifies that Twitter page is opened
-    # Then correct Twitter page is opened
+    Then correct Twitter page is opened
 
   @Linkedin
   Scenario:Linkedin Verification
     When User clicks to “Linkedin“ icon
-    Then User verifies that Linkedin page is opened
+    Then correct Linkedin page is opened
 
 
 

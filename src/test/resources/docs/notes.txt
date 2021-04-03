@@ -1,7 +1,25 @@
 Notes...
 1- Product backlog(all user stories) : We already assigned Backlogs in 7 Epics in Sprint1 to 5 Testers.
 2- We created Framework on intellij and connected with github repository.
-3- We are created an online test case excel file and everyone will fill their test cases.
+3- We are created an online test cases on Jira.
 4- We are going to create feature files and their Step & Page classes.
+
+Questions :
+1- Do we need to write scenario for each WebElement or not?
+2- How to write manual testing details?
+3-
+
+Git Commands :
+        git init
+        git status
+        git add *
+        git status
+        git commit -m "First commit"
+        git status
+        git branch -M main
+        git status
+        git log
+        git remote add origin https://github.com/ZennT/test.git
+        git push -u origin main
 
 
