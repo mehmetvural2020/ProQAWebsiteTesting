@@ -15,6 +15,8 @@ public class ServicesStepDefs extends Base {
 
         waitSomeTime(2000L);
 
+        imageIsDisplayedAndEnabled(servicesPage.mainText);
+
         imageIsDisplayedAndEnabled(servicesPage.webTestingImage);
 
         imageIsDisplayedAndEnabled(servicesPage.mobileTestingImage);
@@ -26,6 +28,8 @@ public class ServicesStepDefs extends Base {
         imageIsDisplayedAndEnabled(servicesPage.manualTestingImage);
 
         imageIsDisplayedAndEnabled(servicesPage.automatedTestingImage);
+
+        imageIsDisplayedAndEnabled(servicesPage.bottomText);
     }
 
     @Then("Services texts are displayed on the homepage")
@@ -46,6 +50,8 @@ public class ServicesStepDefs extends Base {
         textIsDisplayedAndEnabled("Manual Testing", servicesPage.manualTestingText);
 
         textIsDisplayedAndEnabled("Automated Testing", servicesPage.automatedTestingText);
+
+
 
     }
 
