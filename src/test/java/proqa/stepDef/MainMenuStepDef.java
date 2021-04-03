@@ -13,8 +13,8 @@ public class MainMenuStepDef extends Base {
 
     }
 
-    @Then("verifies the logo and texts on main menu")
-    public void verifiesTheLogoAndTextsOnMainMenu() {
+    @Then("displayed the logo and texts on main menu")
+    public void displayedTheLogoAndTextsOnMainMenu() {
 
        mainMenuPage.mainLogo.isDisplayed();
        textIsDisplayedAndEnabled("Home", mainMenuPage.homeText);
@@ -39,6 +39,9 @@ public class MainMenuStepDef extends Base {
         textIsDisplayedAndEnabled("Contact", mainMenuPage.contact);
         click(mainMenuPage.contact);
         mainMenuPage.freeConsultationText.isDisplayed();
+
+        moveAndClickToElement(mainMenuPage.searchButton);
+        mainMenuPage.searchTab.isEnabled();
 
 
     }

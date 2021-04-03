@@ -47,6 +47,11 @@ public class MainMenuPage extends Base {
     @FindBy(xpath = " //h3[text()='Free Consultation']")
     public WebElement freeConsultationText;
 
+    @FindBy(xpath = "(//div[@class='search-trigger'])[2]")
+    public WebElement searchButton;
+    @FindBy(xpath = "//div[@class='container']//input[@placeholder='Search...']")
+    public WebElement searchTab;
+
 
 
 
