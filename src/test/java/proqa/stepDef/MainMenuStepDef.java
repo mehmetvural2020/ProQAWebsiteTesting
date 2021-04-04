@@ -8,13 +8,13 @@ public class MainMenuStepDef extends Base {
 
     MainMenuPage mainMenuPage=new MainMenuPage();
 
-    @Given("user is on Homepage")
-    public void userIsOnHomepage() {
+//    @Given("user is on Homepage")
+//    public void userIsOnHomepage() {
+//
+//    }
 
-    }
-
-    @Then("verifies the logo and texts on main menu")
-    public void verifiesTheLogoAndTextsOnMainMenu() {
+    @Then("displayed the logo and texts on main menu")
+    public void displayedTheLogoAndTextsOnMainMenu() {
 
        mainMenuPage.mainLogo.isDisplayed();
        textIsDisplayedAndEnabled("Home", mainMenuPage.homeText);
@@ -40,7 +40,18 @@ public class MainMenuStepDef extends Base {
         click(mainMenuPage.contact);
         mainMenuPage.freeConsultationText.isDisplayed();
 
+        moveAndClickToElement(mainMenuPage.searchButton);
+        mainMenuPage.searchTab.isEnabled();
 
     }
 
+    @Given("user scrolls down to service")
+    public void userScrollsDownToService() {
+        scrollDown(mainMenuPage.scrollToService);
+    }
+
+    @Then("user checks sticky template is enabled")
+    public void userChecksStickyTemplateIsEnabled() {
+        mainMenuPage.stickyTemplate.isEnabled();
+    }
 }

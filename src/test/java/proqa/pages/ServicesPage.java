@@ -13,6 +13,9 @@ public class ServicesPage {
     @FindBy(xpath="//h3[normalize-space()='Services']")
     public WebElement services;
 
+    @FindBy(xpath = "//p[contains(text(),'We offer premium QA services to ensure your app me')]")
+    public WebElement mainText;
+
     @FindBy(xpath="//img[@src='https://www.proqa.dev/wp-content/uploads/2019/09/img_03-3.jpg']")
     public WebElement webTestingImage;
 
@@ -48,4 +51,7 @@ public class ServicesPage {
 
     @FindBy(xpath="(//div[@class='srv-container'])[6]")
     public WebElement automatedTestingText;
+
+    @FindBy(xpath = "//p[contains(text(),'ProQA is here to contribute to your app’s success.')]")
+    public WebElement bottomText;
 }
