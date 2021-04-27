@@ -2,8 +2,6 @@ Feature:Blog Single Post Testing
 
   Background:
     Given user is in landing page
-
-  Scenario: Single Post Verification
     When User clicks on Blog
     And User opens first post
 
@@ -11,12 +9,12 @@ Feature:Blog Single Post Testing
     When First Post title is present
 
   Scenario: Previous Post Verification
-    When Previous title is present
-    Then Previous post arrow is present
+    When Previous Post is present
+#   Then Previous post arrow is present
 
   Scenario: Next Post Verification
-    When Next Post title is present
-    Then Next Post arrow is present
+    When Next Post is present
+#   Then Next Post arrow is present
 
   Scenario: Related Post Verification
     When Related Posts title is present
@@ -26,11 +24,13 @@ Feature:Blog Single Post Testing
     When User writes and posts a comment
 
   Scenario: Search Function Verification
-    When User clears search box
-    Then User makes a search
+    When User makes a search
+#
+  Scenario: Newsleter Verification
+    When Newsleter is present
 
   Scenario: Recent Post Verification
-    When Recent Posts title is present
+    When Recent Posts is present
     Then Recent posts are present
 
   Scenario: Tags Verification
