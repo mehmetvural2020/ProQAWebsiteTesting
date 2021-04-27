@@ -10,11 +10,11 @@ Feature:Blog Single Post Testing
 
   Scenario: Previous Post Verification
     When Previous Post is present
-#   Then Previous post arrow is present
+    Then Previous post arrow is present
 
   Scenario: Next Post Verification
     When Next Post is present
-#   Then Next Post arrow is present
+   Then Next Post arrow is present
 
   Scenario: Related Post Verification
     When Related Posts title is present

@@ -14,12 +14,12 @@ public class BlogFirstPostStepDefs extends Base {
 
         moveToElement(blogPage.firstPostImage);
         waitSomeTime(3000L);
-        click(blogPage.firstPostImage);
+        click(blogPage.arrow1);
 
     }
     @When("First Post title is present")
     public void firstPostTitleIsPresent() {
-        textIsDisplayedAndEnabled("The Need for Test Automation,blogPage",blogPage.firstPostTitle);
+        textIsDisplayedAndEnabled("The Need for Test Automation",blogPage.firstPostTitle);
     }
 
     @When("Previous Post is present")
@@ -28,23 +28,26 @@ public class BlogFirstPostStepDefs extends Base {
         textIsDisplayedAndEnabled(expected,blogPage.previousPost);
     }
 
-//    @Then("Previous post arrow is present")
-//    public void previousPostArrowIsPresent() {
-//        moveToElement((blogPage.previousPostImage));
-//        waitSomeTime(3000L);
-//        imageIsDisplayedAndEnabled(blogPage.previousPostArrow);
-//
-//    }
+    @Then("Previous post arrow is present")
+    public void previousPostArrowIsPresent() {
+        moveToElement(blogPage.previousPostImage);
+        waitSomeTime(3000L);
+        imageIsDisplayedAndEnabled(blogPage.previousPostArrow);
+
+    }
 
     @When("Next Post is present")
     public void nextPostTitleIsPresent() {
         textIsDisplayedAndEnabled("NEXT POST",blogPage.nextPost);
     }
-//
-//    @Then("Next Post arrow is present")
-//    public void nextPostArrowIsPresent() {
-//    }
-//
+
+    @Then("Next Post arrow is present")
+    public void nextPostArrowIsPresent() {
+        moveToElement(blogPage.nextPostImage);
+        waitSomeTime(2000L);
+        imageIsDisplayedAndEnabled(blogPage.nextPostArrow);
+    }
+
     @When("Related Posts title is present")
     public void relatedPostsTitleIsPresent() {
         textIsDisplayedAndEnabled("Related Posts",blogPage.relatedPosts);

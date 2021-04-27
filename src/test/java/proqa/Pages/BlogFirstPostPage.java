@@ -17,6 +17,9 @@ public class BlogFirstPostPage {
     @FindBy(xpath = "(//img[@class='attachment-full size-full wp-post-image'])[1]")
     public WebElement firstPostImage;
 
+    @FindBy(xpath = "(//div[@class=\"blog-readmore-wrap\"])[1]")
+    public WebElement arrow1;
+
     @FindBy(xpath = "(//h1[@class='page_title'])[1]")
     public WebElement firstPostTitle;
 
@@ -24,9 +27,21 @@ public class BlogFirstPostPage {
     @FindBy(xpath = "(//div[@class='post-nav-link'])[1]")
     public WebElement previousPost;
 
+    @FindBy(xpath = "//img[@alt='What is Software Testing?']")
+    public WebElement previousPostImage;
+
+    @FindBy(xpath = "(//div[@class=\"post-nav-link\"])[1]")
+    public WebElement previousPostArrow;
+
 
     @FindBy(xpath = "(//div[@class='post-nav-link'])[2]")
     public WebElement nextPost;
+
+    @FindBy(xpath = "//img[@alt='What is SDLC?']")
+    public WebElement nextPostImage;
+
+    @FindBy(xpath = "(//div[@class=\"post-nav-link\"])[2]")
+    public WebElement nextPostArrow;
 
 
     @FindBy(xpath = "//h2[@class='single-content-title']")
