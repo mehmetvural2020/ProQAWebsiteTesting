@@ -3,8 +3,10 @@ package proqa.stepDef;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import proqa.Pages.Footer;
 
-public class FooterStepdefs {
+public class FooterStepdefs extends Base {
+    Footer footer = new Footer();
 
     @When("About Us title is verified")
     public void aboutUsTitleIsVerified() {
