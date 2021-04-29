@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import proqa.utils.MyDriver;
 
-public class Footer {
+public class FooterPage {
 
-    public Footer() {
+    public FooterPage() {
         PageFactory.initElements(MyDriver.get(), this);
     }
 
@@ -25,8 +25,6 @@ public class Footer {
 
     @FindBy(xpath = "//p[contains(text(),'Thanks for contacting us! We will be in touch with')]")
     public WebElement Message;
-
-
 
     @FindBy(xpath = "(//i[@class='flaticon-twitter'])[2]")
     public WebElement Twitter;

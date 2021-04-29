@@ -25,12 +25,12 @@ Feature:Blog Single Post Testing
 
   Scenario: Search Function Verification
     When User makes a search
-
+#
   Scenario: Newsleter Verification
     When Newsleter is present
 
   Scenario: Recent Post Verification
-    When Recent Posts heading is present
+    When Recent Posts is present
     Then Recent posts are present
 
   Scenario: Tags Verification
