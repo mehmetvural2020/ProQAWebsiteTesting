@@ -86,4 +86,10 @@ public class Base {
         webElement.clear();
         webElement.sendKeys(value);
     }
+     protected void setAttribute(WebElement webElement) {
+         JavascriptExecutor js = (JavascriptExecutor) MyDriver.get();
+         js.executeScript("arguments[0].setAttribute('target', '')", webElement );
+    }
+
+
 }

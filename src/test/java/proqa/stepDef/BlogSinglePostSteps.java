@@ -2,10 +2,11 @@ package proqa.stepDef;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import proqa.Pages.BlogHomePage;
 import proqa.utils.MyDriver;
 
-public class SinglePostSteps extends Base {
+public class BlogSinglePostSteps extends Base {
     BlogHomePage blogHomePage = new BlogHomePage();
 
     // First post test
