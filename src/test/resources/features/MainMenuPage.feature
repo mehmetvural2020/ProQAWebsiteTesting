@@ -6,6 +6,6 @@ Feature: Main Menu WebElements
     Given user is on Homepage
     Then displayed the logo and texts on main menu
 
-    Scenario: Sticky template functionality
-      When user scrolls down to service
-      Then  user checks sticky template is enabled
+  Scenario: Sticky template functionality
+    When user scrolls down to service
+    Then  user checks sticky template is enabled

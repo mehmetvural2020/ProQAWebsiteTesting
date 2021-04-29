@@ -6,8 +6,8 @@ import org.openqa.selenium.support.FindBy;
 public class LatestPostsPage {
 
     @FindBy(xpath = "//div[@class='post-media-wrapper']//a[contains(text(),'January 25, 2021')]")
-    public WebElement dateOfPost;
+    public WebElement firstDateOfPost;
 
-    @FindBy(xpath = "//div[@class='page_title_container scroll_anim']//h1[@class='page_title'][text()='January 25, 2021']" )
-    public WebElement headerDate;
+    @FindBy(xpath = "(//a[text()='January 21, 2021'])[1]" )
+    public WebElement secondDateOfPost;
 }
