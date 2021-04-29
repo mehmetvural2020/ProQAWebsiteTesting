@@ -1,18 +1,18 @@
 Feature:Footer Testing
 
   Background:
-    Given user is in landing page
+    Given user is on landing page
 
   @AboutUs
   Scenario:About Us Verification
-    When About Us title is verified
+    When About Us title is present
 
   @Subscribe
   Scenario:Subscribe Function Verification
-    When Subscribe title is verified
-    Then User enters an email address and clicks on the arrow
-    And A message displays as Thanks for contacting us! We will be in touch with you shortly
-    Then The email is recorded to the system
+    When Subscribe title is present
+    And User enters an email address and clicks on the arrow
+    Then A message displays as Thanks for contacting us! We will be in touch with you shortly
+    And The email is recorded to the system
 
 
 #    When the user enters an email address and clicks on the “arrow”.
@@ -33,5 +33,5 @@ Feature:Footer Testing
 
   @Address
   Scenario:Address Verification
-    Then The address in Chicago,IL is displayed on home screen
+    Then The address Chicago,IL is present on home screen
 
