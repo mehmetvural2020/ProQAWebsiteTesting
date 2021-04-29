@@ -4,10 +4,11 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import proqa.Pages.Footer;
+import proqa.Pages.FooterPage;
+import proqa.utils.MyDriver;
 
-public class FooterStepdefs extends Base {
-    Footer footer = new Footer();
+public class FooterStepDefs extends Base {
+    FooterPage footer = new FooterPage();
 
     @Given("user is on landing page")
     public void userIsOnLandingPage() {
@@ -41,28 +42,48 @@ public class FooterStepdefs extends Base {
 
     }
 
-    @And("The email is recorded to the system")
-    public void theEmailIsRecordedToTheSystem() {
-    }
+//    @And("The email is recorded to the system")
+//    public void theEmailIsRecordedToTheSystem() {
+//
+//    }
 
     @When("User clicks to Twitter icon")
     public void userClicksToTwitterIcon() {
+        click(footer.Twitter);
     }
 
     @Then("Correct Twitter page is opened")
     public void correctTwitterPageIsOpened() {
+
+        waitSomeTime(2000L);
+        String expected = "https://twitter.com/proqadev";
+        String actual =  MyDriver.get().getCurrentUrl();
+        verifyTheText(expected, actual);
+        waitSomeTime(1000L);
+        logger.info("{} is displayed.", expected);
+
     }
 
     @When("User clicks to Linkedin icon")
     public void userClicksToLinkedinIcon() {
+        click(footer.Linkedin);
     }
 
     @Then("Correct Linkedin page is opened")
     public void correctLinkedinPageIsOpened() {
+        waitSomeTime(2000L);
+        String expected = "https://www.linkedin.com/company/proqa";      //https://www.linkedin.com/company/proqa/about/  BUG??
+        String actual =  MyDriver.get().getCurrentUrl();
+        verifyTheText(expected, actual);
+        waitSomeTime(1000L);
+        logger.info("{} is displayed.", expected);
+
+
     }
 
     @Then("The address Chicago,IL is present on home screen")
     public void theAddressChicagoILIsPresentOnHomeScreen() {
+        textIsDisplayedAndEnabled("Chicago, IL", footer.Address);
     }
 
 
