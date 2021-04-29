@@ -1,6 +1,7 @@
 package proqa.stepDef;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import proqa.Pages.Footer;
@@ -8,24 +9,39 @@ import proqa.Pages.Footer;
 public class FooterStepdefs extends Base {
     Footer footer = new Footer();
 
-    @When("About Us title is verified")
-    public void aboutUsTitleIsVerified() {
+    @Given("user is on landing page")
+    public void userIsOnLandingPage() {
+
+    }
+
+    @When("About Us title is present")
+    public void aboutUsTitleIsPresent() {
+        textIsDisplayedAndEnabled("About Us" ,footer.AboutUs);
     }
 
 
-    @When("Subscribe title is verified")
-    public void subscribeTitleIsVerified() {
+    @When("Subscribe title is present")
+    public void subscribeTitleIsPresent() {
+        textIsDisplayedAndEnabled("Subscribe" , footer.Subscribe);
+
     }
 
-    @Then("User enters an email address and clicks on the arrow")
+    @And("User enters an email address and clicks on the arrow")
     public void userEntersAnEmailAddressAndClicksOnTheArrow() {
+        waitSomeTime(2000L);
+        sendKeysValue("esum@gmail.com", footer.EnterEmail);
+        waitSomeTime(2000L);
+        click(footer.Arrow);
+
     }
 
-    @And("A message displays as Thanks for contacting us! We will be in touch with you shortly")
+    @Then("A message displays as Thanks for contacting us! We will be in touch with you shortly")
     public void aMessageDisplaysAsThanksForContactingUsWeWillBeInTouchWithYouShortly() {
+        textIsDisplayedAndEnabled("Thanks for contacting us! We will be in touch with you shortly." ,footer.Message);
+
     }
 
-    @Then("The email is recorded to the system")
+    @And("The email is recorded to the system")
     public void theEmailIsRecordedToTheSystem() {
     }
 
@@ -45,7 +61,9 @@ public class FooterStepdefs extends Base {
     public void correctLinkedinPageIsOpened() {
     }
 
-    @Then("The address in Chicago,IL is displayed on home screen")
-    public void theAddressInChicagoILIsDisplayedOnHomeScreen() {
+    @Then("The address Chicago,IL is present on home screen")
+    public void theAddressChicagoILIsPresentOnHomeScreen() {
     }
+
+
 }
