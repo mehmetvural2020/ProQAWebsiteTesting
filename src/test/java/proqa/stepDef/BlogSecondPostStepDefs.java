@@ -47,6 +47,4 @@ public class BlogSecondPostStepDefs extends Base {
         textIsDisplayedAndEnabled("What is SDLC?",blogSecondPostPage.thirdPost);
     }
 
-
-
 }
