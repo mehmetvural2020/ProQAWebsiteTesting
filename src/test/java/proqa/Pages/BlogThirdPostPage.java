@@ -23,6 +23,21 @@ public class BlogThirdPostPage {
     @FindBy(xpath = "//div[@class='page_title_container scroll_anim']//h1[@class='page_title'][normalize-space()='What is SDLC?']")
     public WebElement thirdPostTitle;
 
+    @FindBy(xpath = "//a[normalize-space()='Previous Post']")
+    public WebElement previousPost;
+
+    @FindBy(xpath = "//img[@alt='The Need for Test Automation']")
+    public WebElement previousPostPhoto;
+
+    @FindBy(xpath = "(//div[@class=\"post-nav-link\"])[1]")
+    public WebElement previousPostArrow;
+
+    @FindBy(xpath = "(//a[@rel='bookmark'])[1]")
+    public WebElement firstPost;
+
+    @FindBy(xpath = "(//span[@class='post-title'])[2]")
+    public WebElement secondPost;
+
 
 
 

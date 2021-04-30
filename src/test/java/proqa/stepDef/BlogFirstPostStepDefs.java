@@ -66,9 +66,9 @@ public class BlogFirstPostStepDefs extends Base {
 
     @When("User writes and posts a comment")
     public void userWritesAndPostsAComment() {
-        sendKeysValue("ozen",blogPage.nameBox);
+        sendKeysValue("zenn",blogPage.nameBox);
         sendKeysValue("zenn.diamond@gmail.com",blogPage.emailBox);
-        sendKeysValue("There is typo in newsletter heading ", blogPage.commentField);
+        sendKeysValue("There is typo in newsletter heading", blogPage.commentField);
         click(blogPage.postButton);
         textIsDisplayedAndEnabled("Comments", blogPage.comments);
     }

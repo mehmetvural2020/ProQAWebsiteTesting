@@ -44,7 +44,7 @@ public class BlogSecondPostStepDefs extends Base {
     @Then("First and third posts are present")
     public void firstAndThirdPostsArePresent() {
         textIsDisplayedAndEnabled("The Need for Test Automation",blogSecondPostPage.firstPost);
-        textIsDisplayedAndEnabled("What is SDLC?",blogSecondPostPage.secondPost);
+        textIsDisplayedAndEnabled("What is SDLC?",blogSecondPostPage.thirdPost);
     }
 
 
