@@ -14,7 +14,7 @@ Feature:Blog Single Post Testing
 
   Scenario: Next Post Verification
     When Next Post is present
-   Then Next Post arrow is present
+    Then Next Post arrow is present
 
   Scenario: Related Post Verification
     When Related Posts title is present

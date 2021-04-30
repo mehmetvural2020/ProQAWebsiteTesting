@@ -34,6 +34,15 @@ public class BlogHomePage {
     @FindBy(xpath = "//*[contains(text(),'What is SDLC?')]")
     public WebElement thirdPost;
 
+    @FindBy(xpath = "(//*[@class=\"social-share\"]/a)[1]")
+    public WebElement facebook1;
+
+    @FindBy(xpath = "(//*[@class=\"social-share\"]/a)[4]")
+        public WebElement facebook2;
+
+    @FindBy(xpath = "(//*[@class=\"social-share\"]/a)[7]")
+        public WebElement facebook3;
+
 
 
 

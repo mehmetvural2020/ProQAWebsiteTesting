@@ -11,6 +11,7 @@ public class BlogFirstPostStepDefs extends Base {
 
     @When("User clicks on Blog")
     public void userClicksOnBlog() {
+
         click(blogPage.blog);
     }
 
