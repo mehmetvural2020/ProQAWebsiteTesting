@@ -68,6 +68,7 @@ public class LatestPostsStepdef extends Base {
     @Then("The user clicks on the “Facebook“ icon")
     public void theUserClicksOnTheFacebookIcon() {
         theUserGetsTheFirstPostTitle();
+       // setAttribute(latest.firstFacebookIcon); //facebook link opens in the same tab
         latest.firstFacebookIcon.click();
     }
 
@@ -76,16 +77,48 @@ public class LatestPostsStepdef extends Base {
         Set<String> allWindowHandles = MyDriver.get().getWindowHandles();
         System.out.println(allWindowHandles.size());//output-->2
         Iterator<String> it = allWindowHandles.iterator();//in order to iterate through window
-        String mainPageHandle = it.next();//stepping forward to main page
-        String faceHandle = it.next();//Stepping forward to facebook
-        MyDriver.get().switchTo().window(faceHandle);
+        String mainPageHandle = it.next();//declaring main page
+        String faceHandle = it.next();// declaring facebook page
+        MyDriver.get().switchTo().window(faceHandle);//Stepping forward to facebook
 
         String expected="Facebook";
         String actual = latest.facebookLogo.getText();
         verifyTheText(expected,actual);
         MyDriver.get().close();
-        MyDriver.get().switchTo().window(mainPageHandle);
+        MyDriver.get().switchTo().window(mainPageHandle);//stepping forward to main page
 
     }
+
+    @Then("The user clicks on the “Linkedin“ icon")
+    public void theUserClicksOnTheLinkedinIcon() {
+        latest.linkedinIcon.click();
+    }
+
+    @And("and lands on to Linkedin page and verifies the text on Linkedin page and closes the page")
+    public void andLandsOnToLinkedinPageAndVerifiesTheTextOnLinkedinPageAndClosesThePage() {
+        Set<String> allWindowHandles = MyDriver.get().getWindowHandles();
+        Iterator<String> iterator = allWindowHandles.iterator();
+        String mainW = iterator.next();
+        String linkedinW = iterator.next();
+        MyDriver.get().switchTo().window(linkedinW);
+        String actualUrl = MyDriver.get().getCurrentUrl();
+        String expectedUrl = "https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2FshareArticle%3Fmini%3Dtrue%26url%3Dhttps%3A%2F%2Fwww.proqa.dev%2F2021%2F01%2F25%2Fthe-need-for-test-automation%2F";
+
+        verifyTheText(actualUrl, expectedUrl);
+        MyDriver.get().close();
+    }
+
+    @Then("The user clicks on the Read full blog link")
+    public void theUserClicksOnTheReadFullBlogLink() {
+    }
+
+    @And("and lands on to Blog page and verifies the text on page and closes the page")
+    public void andLandsOnToBlogPageAndVerifiesTheTextOnPageAndClosesThePage() {
+    }
+
+    @Then("The user checks <MainText>,<EinsteinText>,<BottomText>")
+    public void theUserChecksMainTextEinsteinTextBottomText() {
+    }
+
 
 }
