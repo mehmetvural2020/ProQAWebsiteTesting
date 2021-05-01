@@ -35,10 +35,10 @@ Feature: Functionality of Latest Post
   @text
   Scenario Outline: Text check
     When The user gets the first post title
-    Then The user checks <MainText>,<EinsteinText>,<BottomText>
+    Then The user checks "<MainText>","<EinsteinText>","<BottomText>"
     Examples:
       | MainText                                                        | EinsteinText                                                                                    | BottomText                                                                                  |
-      |Expand your knowledge in Software Testing with our latest content|The significant problems we face cannot be solved by the same level of thinking that created them|Insights to help you do what you do better. Read our blog to enhance level of your thinking!|
+      |Expand your knowledge in Software Testing with our latest content.|The significant problems we face cannot be solved by the same level of thinking that created them.|Insights to help you do what you do better. Read our blog to enhance level of your thinking! Read Full Blog|
 
 
 

@@ -3,6 +3,7 @@ package proqa.stepDef;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import proqa.Pages.LatestPostPage;
@@ -110,15 +111,29 @@ public class LatestPostsStepdef extends Base {
 
     @Then("The user clicks on the Read full blog link")
     public void theUserClicksOnTheReadFullBlogLink() {
-    }
+        latest.blogLink.click();
+
+          }
 
     @And("and lands on to Blog page and verifies the text on page and closes the page")
     public void andLandsOnToBlogPageAndVerifiesTheTextOnPageAndClosesThePage() {
+        String actualTitle = MyDriver.get().getTitle();
+        String expectedTitle = "Blog – proqa.dev";
+        verifyTheText(actualTitle,expectedTitle);
     }
 
-    @Then("The user checks <MainText>,<EinsteinText>,<BottomText>")
-    public void theUserChecksMainTextEinsteinTextBottomText() {
+    @Then("The user checks {string},{string},{string}")
+    public void theUserChecks(String MainText, String EinsteinText, String BottomText) {
+        String expectedMainText = latest.mainText.getText();
+        String expectedEinsteinText =latest.einsteinText.getText();
+        String expectedBottomText = latest.bottomText.getText();
+
+        Assert.assertEquals(MainText,expectedMainText);
+        Assert.assertEquals(EinsteinText,expectedEinsteinText);
+        Assert.assertEquals(BottomText,expectedBottomText);
+
+
+
+
     }
-
-
 }
