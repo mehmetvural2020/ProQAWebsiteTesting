@@ -39,6 +39,6 @@ public class BlogSecondPostPage {
     public WebElement firstPost;
 
     @FindBy(xpath = "(//a[@rel='bookmark'])[2]")
-    public WebElement secondPost;
+    public WebElement thirdPost;
 
 }
