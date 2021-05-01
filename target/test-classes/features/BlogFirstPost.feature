@@ -1,4 +1,4 @@
-Feature:Blog Single Post Testing
+Feature:Blog First Post Testing
 
   Background:
     Given user is in landing page
@@ -14,7 +14,7 @@ Feature:Blog Single Post Testing
 
   Scenario: Next Post Verification
     When Next Post is present
-   Then Next Post arrow is present
+    Then Next Post arrow is present
 
   Scenario: Related Post Verification
     When Related Posts title is present
@@ -25,7 +25,7 @@ Feature:Blog Single Post Testing
 
   Scenario: Search Function Verification
     When User makes a search
-#
+
   Scenario: Newsleter Verification
     When Newsleter is present
 

@@ -3,48 +3,43 @@ package proqa.stepDef;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import proqa.Pages.BlogFirstPostPage;
+import proqa.Pages.BlogThirdPostPage;
 
 public class BlogThirdPostStepDefs extends Base {
 
-    BlogFirstPostPage blogPage = new BlogFirstPostPage();
+    BlogThirdPostPage blogThirdPostPage = new BlogThirdPostPage();
 
-    @When("User clicks on Blog")
-    public void userClicksOnBlog() {
-        moveToElement(blogPage.blog);
-        waitSomeTime(1000L);
-        click(blogPage.blog);
-    }
-
-    @And("User opens third post")
-    public void userOpensThirdPost() {
+    @And("User clicks on third post")
+    public void userClicksOnThirdPost() {
+        moveToElement(blogThirdPostPage.thirdPostImage);
+        waitSomeTime(2000L);
+        click(blogThirdPostPage.arrow3);
     }
 
     @When("Third Post title is present")
     public void thirdPostTitleIsPresent() {
+        textIsDisplayedAndEnabled("What is SDLC?", blogThirdPostPage.thirdPostTitle);
     }
 
-    @When("The Previous Post title is present")
-    public void thePreviousPostTitleIsPresent() {
+    @When("Previous Post Heading is present")
+    public void previousPostHeadingIsPresent() {
+        String expected = "PREVIOUS POST";
+        textIsDisplayedAndEnabled(expected,blogThirdPostPage.previousPost);
     }
 
-    @Then("The Previous post arrow is present")
-    public void thePreviousPostArrowIsPresent() {
+    @Then("Previous Post Arrow is present")
+    public void previousPostArrowIsPresent() {
+        moveToElement(blogThirdPostPage.previousPostPhoto);
+        waitSomeTime(3000L);
+        imageIsDisplayedAndEnabled(blogThirdPostPage.previousPostArrow);
     }
 
-    @When("The Next post title is present")
-    public void theNextPostTitleIsPresent() {
-    }
-
-    @Then("The Next post arrow is present")
-    public void theNextPostArrowIsPresent() {
-    }
-
-    @When("Related posts title is present")
-    public void relatedPostsTitleIsPresent() {
-    }
-
-    @Then("First and Second Posts are present")
+    @Then("First and second posts are present")
     public void firstAndSecondPostsArePresent() {
+        textIsDisplayedAndEnabled("The Need for Test Automation",blogThirdPostPage.firstPost);
+        textIsDisplayedAndEnabled("What is Software Testing?",blogThirdPostPage.secondPost);
     }
+
+
+
 }

@@ -1,37 +1,37 @@
-Feature:Blog Single Post Testing
+Feature:Blog Second Post Testing
 
   Background:
     Given user is in landing page
-
-  Scenario: Single Post Verification
     When User clicks on Blog
-    And User opens second post
+    And User clicks on second post
 
   Scenario: Second Post Title Verification
     When Second Post title is present
 
-#  Scenario: Previous Post Verification
-#    When Previous title is present
-#    Then The Previous Post arrow is present
+  Scenario: Previous Post Verification
+    When Previous Post heading is present
+    Then Previous Post arrow is present
 
-#  Scenario: Next Post Verification
-#    When The Next Post title is present
-#    Then The Next Post arrow is present
+  Scenario: Next Post Verification
+    When Next Post is present
+    Then Next Post Arrow is present
 
   Scenario: Related Post Verification
     When Related Posts title is present
     Then First and third posts are present
 
-#  Scenario: Write a Comment Verification
-#    When User writes and posts a comment
-#
-#  Scenario: Search Function Verification
-#    When User clears search box
-#    Then User makes a search
+  Scenario: Write a Comment Verification
+    When User writes and posts a comment
 
-#  Scenario: Recent Post Verification
-#    When Recent Posts title is present
-#    Then Recent posts are present
+  Scenario: Search Function Verification
+    When User makes a search
 
-#  Scenario: Tags Verification
-#    When Tags are present
+  Scenario: Newsleter Verification
+    When Newsleter is present
+
+  Scenario: Recent Post Verification
+    When Recent Posts is present
+    Then Recent posts are present
+
+  Scenario: Tags Verification
+    When Tags are present
