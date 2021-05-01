@@ -1,48 +1,36 @@
 Feature:Blog Homepage Testing
+Background:
+  Given user is in landing page
+  When user verifies Home link
 
   Scenario: Home link verification
-    Given user is in landing page
-    When user verifies Home link
     And user clicks on Home
     Then user verifies Homepage url
 
-  Scenario: First post verification
-    Given user is in landing page
-    When user verifies Home link
-    And user clicks on first post
-    Then user verifies first post
 
-  Scenario: Second post verification
-    Given user is in landing page
-    When user verifies Home link
-    And user clicks on second post
-    Then user verifies second post
-
-  Scenario: Third post verification
-    Given user is in landing page
-    When user verifies Home link
-    And user clicks on third post
-    Then user verifies third post
-
-  Scenario: First Facebook post verification
-    Given user is in landing page
-    When user verifies Home link
-    And user verifies facebook icon
-    And user clicks on facebook post
-    Then user verifies facebook page
+  Scenario Outline: Single post verification
+    And user clicks on <PostLink>
+    Then user verifies  "<PostTitle>"
+    Examples:
+      | PostLink | PostTitle                                  |
+      | 1        |  The Need for Test Automation – proqa.dev|
+      | 2        |  What is Software Testing? – proqa.dev|
+      | 3        |  What is SDLC? – proqa.dev|
 
 
-  Scenario: Second Facebook post verification
-    Given user is in landing page
-    When user verifies Home link
-    And user verifies second facebook icon
-    And user clicks on second facebook post
-    Then user verifies second facebook page
+  Scenario Outline: Post social media icon test
+    And user verifies <postOrder> and "<SocialMediaAttribute>" and click on it
+    Then user verifies SM "<SocialMediaPageTitle>"
+    Examples:
+      | postOrder | SocialMediaAttribute | SocialMediaPageTitle |
+      | 1         | https://www.facebook.com/sharer/sharer.php?u=https://www.proqa.dev/2021/01/25/the-need-for-test-automation/         | Facebook              |
+      | 1         | https://www.linkedin.com/shareArticle?mini=true&url=https://www.proqa.dev/2021/01/25/the-need-for-test-automation/  | LinkedIn Login, Sign in \| LinkedIn|
+      | 1         | https://twitter.com/intent/tweet?url=https://www.proqa.dev/2021/01/25/the-need-for-test-automation/                 | Twitter                      |
+      | 2         | https://www.facebook.com/sharer/sharer.php?u=https://www.proqa.dev/2021/01/21/what-is-software-testing/         | Facebook              |
+      | 2         | https://www.linkedin.com/shareArticle?mini=true&url=https://www.proqa.dev/2021/01/21/what-is-software-testing/  | LinkedIn Login, Sign in \| LinkedIn|
+      | 2         | https://twitter.com/intent/tweet?url=https://www.proqa.dev/2021/01/21/what-is-software-testing/                 | Twitter                      |
+      | 3         | https://www.facebook.com/sharer/sharer.php?u=https://www.proqa.dev/2021/01/21/what-is-sdlc/         | Facebook              |
+      | 3         | https://www.linkedin.com/shareArticle?mini=true&url=https://www.proqa.dev/2021/01/21/what-is-sdlc/  | LinkedIn Login, Sign in \| LinkedIn|
+      | 3         | https://twitter.com/intent/tweet?url=https://www.proqa.dev/2021/01/21/what-is-sdlc/                 | Twitter                      |
 
 
-  Scenario: Third Facebook post verification
-    Given user is in landing page
-    When user verifies Home link
-    And user verifies third facebook icon
-    And user clicks on third facebook post
-    Then user verifies third facebook page

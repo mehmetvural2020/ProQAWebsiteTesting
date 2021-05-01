@@ -5,16 +5,16 @@ Feature:Blog Single Post Testing
     When User clicks on Blog
     And User clicks on third post
 
-  Scenario: Second Post Title Verification
+  Scenario: Third Post Title Verification
     When Third Post title is present
 
   Scenario: Previous Post Verification
     When Previous Post heading is present
-    Then Previous post arrow is present
+    Then Previous Post arrow is present
 
   Scenario: Next Post Verification
     When Next Post is present
-    Then Next Post arrow is present
+    Then Next Post Arrow is present
 
   Scenario: Related Post Verification
     When Related Posts title is present
