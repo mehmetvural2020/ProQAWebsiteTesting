@@ -6,17 +6,21 @@ import io.cucumber.java.en.When;
 import proqa.Pages.BlogFirstPostPage;
 
 public class BlogFirstPostStepDefs extends Base {
+
     BlogFirstPostPage blogPage = new BlogFirstPostPage();
 
+    @When("User clicks on Blog")
+    public void userClicksOnBlog() {
+        click(blogPage.blog);
+    }
 
     @And("User opens first post")
     public void userOpensFirstPost() {
-
         moveToElement(blogPage.firstPostImage);
         waitSomeTime(3000L);
         click(blogPage.arrow1);
-
     }
+
     @When("First Post title is present")
     public void firstPostTitleIsPresent() {
         textIsDisplayedAndEnabled("The Need for Test Automation",blogPage.firstPostTitle);
@@ -33,7 +37,6 @@ public class BlogFirstPostStepDefs extends Base {
         moveToElement(blogPage.previousPostImage);
         waitSomeTime(3000L);
         imageIsDisplayedAndEnabled(blogPage.previousPostArrow);
-
     }
 
     @When("Next Post is present")
@@ -51,7 +54,6 @@ public class BlogFirstPostStepDefs extends Base {
     @When("Related Posts title is present")
     public void relatedPostsTitleIsPresent() {
         textIsDisplayedAndEnabled("Related Posts",blogPage.relatedPosts);
-
     }
 
     @Then("Second and third posts are present")
@@ -62,9 +64,9 @@ public class BlogFirstPostStepDefs extends Base {
 
     @When("User writes and posts a comment")
     public void userWritesAndPostsAComment() {
-        sendKeysValue("ozen",blogPage.nameBox);
+        sendKeysValue("zenn",blogPage.nameBox);
         sendKeysValue("zenn.diamond@gmail.com",blogPage.emailBox);
-        sendKeysValue("There is typo in newsletter heading ", blogPage.commentField);
+        sendKeysValue("There is a typo in newsletter section", blogPage.commentField);
         click(blogPage.postButton);
         textIsDisplayedAndEnabled("Comments", blogPage.comments);
     }
@@ -102,6 +104,5 @@ public class BlogFirstPostStepDefs extends Base {
         textIsDisplayedAndEnabled("functional testing",blogPage.tag_1);
         textIsDisplayedAndEnabled("functional testing non-functional testing Software Software Development Life Cycle Software Development Process software testing", blogPage.tag_2);
     }
-
 
 }

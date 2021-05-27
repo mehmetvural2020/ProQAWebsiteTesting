@@ -13,39 +13,21 @@ public class BlogHomePage {
     @FindBy(linkText = "Blog")
     public WebElement blog;
 
-    @FindBy(xpath = "(//div[@class=\"blog-readmore-wrap\"])[1]")
-    public WebElement arrow1;
-
-    @FindBy(xpath = "(//div[@class=\"post-nav-link\"])[1]")
-    public WebElement previous1;
-
     @FindBy(xpath = "(//nav[@class=\"bread-crumbs\"])[1]")
     public WebElement homeBlogText;
 
     @FindBy(xpath = "//nav[@class=\"bread-crumbs\"]/a[1]")
     public WebElement homeBlog;
 
-    @FindBy(xpath = "//*[contains(text(),'The Need for Test Automation')]")
-    public WebElement firstPost;
+     @FindBy(xpath = "//h3[@class=\"post-title\"]")
+    public WebElement postLinks;
 
-    @FindBy(xpath = "//*[contains(text(),'What is Software Testing?')]")
-    public WebElement secondPost;
+    @FindBy(xpath = "(//div[@class=\"social-share\"])[1]")
+        public WebElement socialM1;
 
-    @FindBy(xpath = "//*[contains(text(),'What is SDLC?')]")
-    public WebElement thirdPost;
+    @FindBy(xpath = "(//div[@class=\"social-share\"])[2]")
+        public WebElement socialM2;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "(//div[@class=\"social-share\"])[3]")
+        public WebElement socialM3;
 }
