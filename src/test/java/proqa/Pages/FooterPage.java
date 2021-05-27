@@ -14,6 +14,9 @@ public class FooterPage {
     @FindBy(xpath = "//h3[contains (text(),'About Us')]")
     public WebElement AboutUs;
 
+    @FindBy(xpath = "(//div[@class='rb_textmodule_content_wrapper'])[11]")
+    public WebElement Subtitle;
+
     @FindBy(xpath = "//h3[contains (text(),'Subscribe')]")
     public WebElement Subscribe;
 
