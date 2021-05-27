@@ -6,20 +6,15 @@ Feature:Footer Testing
   @AboutUs
   Scenario:About Us Verification
     When About Us title is present
+    Then Subtitle under About Us is present
 
   @Subscribe
   Scenario:Subscribe Function Verification
     When Subscribe title is present
     And User enters an email address and clicks on the arrow
     Then A message displays as Thanks for contacting us! We will be in touch with you shortly
-    And The email is recorded to the system
+#    And The email is recorded to the system  ==> not able to see in UI if email recorded in system or not
 
-
-#    When the user enters an email address and clicks on the “arrow”.
-#
-#    Then a message appears “Thanks for contacting us! We will be in touch with you shortly.”
-#
-#  Check if the email is recorded to the system.
 
   @Twitter
   Scenario:Twitter Verification
@@ -33,5 +28,5 @@ Feature:Footer Testing
 
   @Address
   Scenario:Address Verification
-    Then The address Chicago,IL is present on home screen
+    When The address Chicago,IL is present on home screen
 
