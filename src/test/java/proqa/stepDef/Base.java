@@ -55,12 +55,12 @@ public class Base {
     }
 
     protected void verifyTheText(String expected, String actual) {
-//        Assert.assertEquals(expected, actual);
-        boolean verifyReturn;
-        boolean verifyText = expected.equalsIgnoreCase(actual);
-        if(verifyText){
-            logger.info("{} text is displayed.",actual);
-        }else logger.info("{} is not displayed.",expected);
+        Assert.assertEquals(expected, actual);
+//        boolean verifyReturn;
+//        boolean verifyText = expected.equalsIgnoreCase(actual);
+//        if(verifyText){
+//            logger.info("{} text is displayed.",actual);
+//        }else logger.info("{} is not displayed.",expected);
     }
 
     protected void click(WebElement webElement) {
@@ -86,4 +86,10 @@ public class Base {
         webElement.clear();
         webElement.sendKeys(value);
     }
+     protected void setAttribute(WebElement webElement) {
+         JavascriptExecutor js = (JavascriptExecutor) MyDriver.get();
+         js.executeScript("arguments[0].setAttribute('target', '')", webElement );
+    }
+
+
 }

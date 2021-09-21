@@ -54,5 +54,6 @@ public class Hooks {
 //        if(browserClose.equals("0")) {MyDriver.get().close();}
 
 
+//        MyDriver.get().close();
     }
 }
