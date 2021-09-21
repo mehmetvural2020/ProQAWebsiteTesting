@@ -25,7 +25,6 @@ public class Base {
         }
     }
 
-
     /**
      *  this script must scroll, until link element is visible
      *  once link element visible, it will stop scrolling
@@ -33,6 +32,7 @@ public class Base {
      *  arguments it's an array of webelements after comma
      *  arguments[0] = link web element, it can be any web element
      */
+
     public void scrollDown(WebElement str) {
     /*
       If element is not visible, you have to find it
